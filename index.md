@@ -26,7 +26,7 @@ The examples compare the clean target speech, the unprocessed noisy mixture, and
 
 {% assign example_ids = "000000,000001,000002,000003,000004,000005,000006,000007,000008,000009" | split: "," %}
 {% for example_id in example_ids %}
-## Example {{ forloop.index0 + 1 }}
+## Example {{ forloop.index }}
 
 <div class="player">
     <ts-track title="Unprocessed Mixture">
