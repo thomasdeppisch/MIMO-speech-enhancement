@@ -22,11 +22,15 @@ layout: default
 This page presents binaural audio examples for the manuscript
 > T. Deppisch, "Direction-Preserving MIMO Speech Enhancement Using a Neural Covariance Estimator", 2026.
 
+## Abstract
+Multichannel speech enhancement is widely used as a front-end in microphone array processing systems. While most existing approaches produce a single enhanced signal, direction-preserving multiple-input multiple-output (MIMO) methods instead aim to provide enhanced multichannel signals that retain directional properties, enabling downstream applications such as beamforming, binaural rendering, and direction-of-arrival estimation. In this work, we propose a fully blind, direction-preserving MIMO speech enhancement method based on neural estimation of the spatial noise covariance matrix. A lightweight OnlineSpatialNet estimates a scale-normalized Cholesky factor of the frequency-domain noise covariance, which is combined with a direction-preserving MIMO Wiener filter to enhance speech while preserving the spatial characteristics of both target and residual noise. In contrast to prior approaches relying on oracle information or mask-based covariance estimation for single-output systems, the proposed method directly targets accurate multichannel covariance estimation with low computational complexity. Experimental results show improved speech enhancement, covariance estimation capability, and performance in downstream tasks over a mask-based baseline, approaching oracle performance with significantly fewer parameters and computational cost.
+
+## Examples
 The examples compare the clean target speech, the unprocessed noisy mixture, and enhanced signals obtained with an oracle direction-preserving MIMO Wiener filter (DP-MWF), a DP-MWF using covariance estimates from OnlineSpatialNet, and a DP-MWF using covariance estimates from NICE.
 
 {% assign example_ids = "000000,000001,000002,000003,000004,000005,000006,000007,000008,000009" | split: "," %}
 {% for example_id in example_ids %}
-## Example {{ forloop.index }}
+### Example {{ forloop.index }}
 
 <div class="player">
     <ts-track title="Unprocessed Mixture">
