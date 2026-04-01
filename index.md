@@ -21,11 +21,12 @@ layout: default
 # Direction-Preserving MIMO Speech Enhancement Using a Neural Covariance Estimator
 This page presents binaural audio examples for the manuscript
 > T. Deppisch, "Direction-Preserving MIMO Speech Enhancement Using a Neural Covariance Estimator", 2026.
+
 The examples compare the clean target speech, the unprocessed noisy mixture, and enhanced signals obtained with an oracle direction-preserving MIMO Wiener filter (DP-MWF), a DP-MWF using covariance estimates from OnlineSpatialNet, and a DP-MWF using covariance estimates from NICE.
 
 {% assign example_ids = "000000,000001,000002,000003,000004,000005,000006,000007,000008,000009" | split: "," %}
 {% for example_id in example_ids %}
-## Example {{ forloop.index0 }}
+## Example {{ forloop.index0 + 1 }}
 
 <div class="player">
     <ts-track title="Unprocessed Mixture">
